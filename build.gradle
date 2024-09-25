@@ -56,7 +56,6 @@ tasks.matching { it.name == "checkstyleAotTest" }.all { task ->
 compileJava {
     dependsOn("formatMain")
 }
-compileTest {
+compileTestJava {
     dependsOn("formatTest")
-}
- */
+}*/
