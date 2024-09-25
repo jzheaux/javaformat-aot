@@ -30,3 +30,33 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+/* uncomment to make gw check work */
+
+/*
+tasks.matching { it.name == 'checkFormatAot' }.all { task ->
+    task.enabled = false
+}
+
+tasks.matching { it.name == 'checkFormatAotTest' }.all { task ->
+    task.enabled = false
+}
+
+tasks.matching { it.name == "checkstyleAot" }.all { task ->
+    task.enabled = false
+}
+
+tasks.matching { it.name == "checkstyleAotTest" }.all { task ->
+    task.enabled = false
+}*/
+
+/* uncomment to make gw format work */
+
+/*
+compileJava {
+    dependsOn("formatMain")
+}
+compileTest {
+    dependsOn("formatTest")
+}
+ */
